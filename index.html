@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding by Sudhanshu</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1020;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #111a30;
+        }
+
+        .logo {
+            font-size: 24px;
+            color: #00e5ff;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #00e5ff;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #101b38, #182c50);
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 7vw, 65px);
+            margin-bottom: 20px;
+        }
+
+        .hero span {
+            color: #00e5ff;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            font-size: 18px;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 28px;
+            background: #00e5ff;
+            color: #07111f;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(220px, 1fr)
+            );
+            gap: 22px;
+        }
+
+        .card {
+            background: #151f36;
+            padding: 30px 20px;
+            border: 1px solid #293854;
+            border-radius: 14px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #00e5ff;
+        }
+
+        .card h3 {
+            color: #00e5ff;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        #about p {
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.8;
+            color: #cbd5e1;
+        }
+
+        #contact input,
+        #contact textarea {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            padding: 14px;
+            margin: 12px auto;
+            border-radius: 7px;
+            border: 1px solid #34445f;
+            background: #151f36;
+            color: white;
+            font: inherit;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #111a30;
+            color: #aab6cc;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Coding by Sudhanshu</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <h1>Learn to <span>Code</span></h1>
+
+            <p>
+                Welcome to Coding by Sudhanshu!
+                Learn Python, HTML, CSS and JavaScript
+                with simple tutorials and fun projects.
+            </p>
+
+            <a href="#courses" class="btn">Explore Courses</a>
+        </section>
+
+        <section id="courses">
+            <h2>My Courses</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>🐍 Python</h3>
+                    <p>
+                        Learn Python from the basics and
+                        create calculators, games and more.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🌐 HTML & CSS</h3>
+                    <p>
+                        Build beautiful websites and learn
+                        how to design web pages.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>⚡ JavaScript</h3>
+                    <p>
+                        Add interactive features and
+                        animations to your websites.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hi! I am Sudhanshu, and I love coding,
+                technology and creating projects.
+                This website is a place to explore
+                programming and learn something new.
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <form id="contactForm">
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Your email"
+                    required
+                >
+
+                <textarea
+                    id="message"
+                    placeholder="Your message"
+                    rows="5"
+                    required
+                ></textarea>
+
+                <button type="submit" class="btn">
+                    Send Message
+                </button>
+            </form>
+
+            <p id="result" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            © <span id="year"></span> Coding by Sudhanshu.
+            Made with ❤️ and code.
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        document.getElementById("contactForm")
+            .addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const name =
+                    document.getElementById("name").value;
+
+                document.getElementById("result").textContent =
+                    "Thanks, " + name +
+                    "! This demo form works, but does not send messages yet.";
+
+                this.reset();
+            });
+    </script>
+
+</body>
+</html>
